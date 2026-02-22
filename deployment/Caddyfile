@@ -1,0 +1,6 @@
+perth-greenwave.example.com {
+  encode gzip
+  reverse_proxy /api/* backend:8000
+  reverse_proxy /ws/* backend:8000
+  reverse_proxy /* frontend:80
+}
